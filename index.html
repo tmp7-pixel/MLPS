@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="header">
+      <div class="title">T-REX RUNNER</div>
+      <div class="scoreboard">
+        <span class="hi-score">HI <span id="highScore">00000</span></span>
+        <span class="current-score" id="score">00000</span>
+      </div>
+    </div>
+
+    <div class="game-container" id="gameContainer">
+      <!-- Sky details (clouds/stars) -->
+      <div class="sky" id="sky"></div>
+
+      <!-- Dino -->
+      <div class="dino" id="dino">
+        <svg viewBox="0 0 44 47" class="dino-svg">
+          <!-- Pixel style T-Rex SVG -->
+          <path fill="#535353" d="M22 0h14v2h2v2h2v4h2v6h-2v2h-2v2h-4v2h-2v2h-2v4h4v-2h2v-2h2v2h-2v2h-2v2h-2v2h-2v2h-2v2h-2v2h-2v2h-2v2H8v-2H6v-2H4v-4H2v-6H0V16h2v-2h2v-2h2v-2h2V8h2V6h4V4h4V2h4V0h2zm12 4h4v4h-4V4zM16 32h4v2h-4v-2zm-6 2h4v2h-4v-2zm-4 4h4v2H6v-2zm0 4h2v5H6v-5zm6 0h2v5h-2v-5zm-6 2h-2v3H4v-3zm6 0h-2v3h2v-3z"/>
+        </svg>
+      </div>
+
+      <!-- Obstacles container -->
+      <div id="obstacles"></div>
+
+      <!-- Ground line -->
+      <div class="ground" id="ground"></div>
+
+      <!-- Overlay Messages -->
+      <div class="message-overlay" id="messageOverlay">
+        <h2 id="overlayTitle">PRESS SPACE TO START</h2>
+        <p id="overlaySubtitle">Jump over obstacles to survive!</p>
+        <button id="startBtn">START GAME</button>
+      </div>
+    </div>
+
+    <!-- Controls / Help -->
+    <div class="controls-info">
+      <span><strong>Space / Up Arrow / Tap screen</strong> to Jump</span>
+      <span><strong>Down Arrow</strong> to Duck</span>
+      <button id="soundToggle" class="sound-btn" title="Toggle Sound">🔊 Sound: ON</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
